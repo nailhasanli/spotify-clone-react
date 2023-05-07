@@ -9,6 +9,8 @@ import FullSreen from "./FullSreen";
 
 const Player = () => {
   const fullscreenRef = useRef();
+
+  
   const [show, toggle] = useToggle(false);
   const isFullscreen = useFullscreen(fullscreenRef, show, {
     onClose: () => toggle(false),

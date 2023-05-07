@@ -1,0 +1,121 @@
+.search {
+    .most-listened {
+        margin-bottom: 16px;
+        .slider-item {
+            position: relative;
+        }
+        button {
+            width: 48px;
+            height: 48px;
+            border: 0;
+            background-color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: 300ms all;
+            cursor: pointer;
+            z-index: 10;
+            &.prev {
+                left: -24px;
+            }
+            &.next {
+                right: -24px;
+            }
+            &:hover {
+                scale: 1.06;
+            }
+            
+        }
+        .fav-category {
+            display: flex;
+            overflow-x: auto;
+            gap: 24px;
+            scroll-behavior: smooth;
+            .category-item {
+            width: 438px;
+            height: 220px;
+            flex-shrink: 0;
+            .category-details {
+                h3 {
+                    font-size: 40px;
+                }
+                img {
+                    width: 128px;
+                    height: 128px;
+                }
+            }
+
+        }
+        }
+        
+    }
+
+
+    .box-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 16px;
+        h3 {
+            font-size: 24px;
+            font-weight: 500;
+            color: #fff;
+            cursor: pointer;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        .header-link {
+            font-size: 12px;
+            text-transform: uppercase;
+            font-weight: 500;
+            color: var(--link);
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .search-category {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 24px;
+
+       
+    }
+    .category-item {
+        border-radius: 8px;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        &::before {
+            content: "";
+            display: block;
+            padding-top: 100%;
+        }
+        .category-details {
+            position: absolute;
+            inset: 0;
+            .item-title {
+                font-size: 24px;
+                padding: 16px;
+                font-weight: 500;
+                letter-spacing: -0.04rem;
+            }
+            img {
+                width: 100px;
+                height: 100px;
+                transform: rotate(25deg) translate(18%, -2%);
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+            }
+        }
+    }
+}

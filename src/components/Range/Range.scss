@@ -1,0 +1,12 @@
+.range-section {
+    width: 100%;
+    .range {
+        .range-badge {
+            opacity: 0;
+        }
+    }
+
+    .range:hover .range-badge {
+        opacity: 1;
+    }
+}

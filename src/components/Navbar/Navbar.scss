@@ -1,0 +1,129 @@
+.navbar {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 32px;
+    position: sticky;
+    top: 0;
+    z-index: 44;
+    background-color: #000;
+    .navigation {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        button {
+            width: 32px;
+            height: 32px;
+            border: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            background: transparent;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+    }
+    .profile {
+        position: relative;
+
+        .profile-btn {
+            background: transparent;
+            border: 0;
+            display: flex;
+            align-items: center;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.7);
+            height: 32px;
+            padding: 2px;
+            border-radius: 23px;
+            gap: 8px;
+            cursor: pointer;
+            // &.btn-active {
+            //     background: var(--active);
+            // }
+
+            &:hover {
+                background-color: var(--active);
+            }
+
+            img {
+                width: 32px;
+                height: 32px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+            span {
+                font-size: 14px;
+                font-weight: 500;
+            }
+
+            .rotate-icon {
+                transform: rotate(180deg);
+                transition: 0.3s all;
+            }
+
+            .arrow-icon {
+                transition: 0.3s all;
+            }
+        }
+    }
+    .profile-item {
+        position: absolute;
+        z-index: 10;
+        top: 100%;
+        right: 0;
+        min-width: 196px;
+        background: var(--active);
+        border-radius: 4px;
+        transform: translateY(10px);
+        padding: 4px;
+        ul {
+            display: flex;
+            flex-direction: column;
+            .menu-item {
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                border-radius: 2px;
+                color: hsla(0, 0%, 100%, 0.9);
+                padding: 12px;
+                font-size: 14px;
+                &.item-active:hover {
+                    background-color: hsla(0, 0%, 100%, 0.1);
+                    color: #fff;
+                }
+            }
+        }
+    }
+    .navbar-search {
+        margin-right: auto;
+        margin-left: 16px;
+        position: relative;
+        input {
+            max-width: 100% ;
+            width: 364px;
+            height: 48px;
+            background: #fff;
+            padding: 6px 45px;
+            border-radius: 30px;
+            font-size: 14px;
+            outline: none;
+        }
+        label {
+            position: absolute;
+            width: 50px;
+            height: 40px;
+            top: 3px;
+            left: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #000;
+        }
+
+    }
+}
+

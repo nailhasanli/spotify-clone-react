@@ -1,0 +1,173 @@
+.bottom-bar {
+    height: var(--bottom-bar-height);
+    background: var(--footer);
+    border-top: 1px solid #282828;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    .top-player-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        border: 0;
+        background: none;
+        color: var(--link);
+        cursor: pointer;
+        &.play {
+            background: #fff;
+            border-radius: 50%;
+            color: #000;
+            transition: 0.3s;
+            &:hover {
+                transform: scale(1.06);
+                color: #000;
+            }
+        }
+        &:hover {
+            color: #fff;
+        }
+    }
+    .player {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+        padding: 0 16px;
+        .left {
+            display: flex;
+            align-items: center;
+            min-width: 180px;
+            width: 30%;
+            .left-items {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                .left-cover {
+                    width: 56px;
+                    height: 56px;
+                    position: relative;
+                    .left-cover-btn {
+                        width: 26px;
+                        height: 26px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background: rgba(0, 0, 0, 0.7);
+                        color: var(--link);
+                        border: 0;
+                        position: absolute;
+                        top: 5px;
+                        right: 5px;
+                        border-radius: 50%;
+                        opacity: 0;
+                        &:hover {
+                            transform: scale(1.06);
+                        }
+                    }
+                    img {
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                    &:hover .left-cover-btn {
+                        opacity: 1;
+                    }
+                }
+                .left-title {
+                    h6 {
+                        font-size: 14px;
+                        font-weight: 300;
+                        color: var(--link);
+                        margin-bottom: 5px;
+                    }
+                    p {
+                        font-size: 11px;
+                        color: var(--link);
+                    }
+                }
+                .left-btn {
+                    display: flex;
+
+                    align-items: center;
+                }
+            }
+        }
+        .center {
+            max-width: 722px;
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .top {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+            .bottom {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                .music-duration {
+                    font-size: 11px;
+                    color: var(--link);
+                }
+            }
+        }
+        .right {
+            min-width: 180px;
+            width: 30%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            .volume-range {
+                width: 93px;
+                max-width: 100%;
+            }
+        }
+    }
+    .fullscreen {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        .bg-image {
+            position: absolute;
+            inset: 0;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            opacity: 0.4;
+            filter: blur(15px);
+        }
+        .center {
+            max-width: 100%;
+            width: 90%;
+            position: absolute;
+            bottom: 20px;
+            display: flex;
+            flex-direction: column-reverse;
+            .fullscreen-player {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .fullscreen-volume {
+                    display: flex;
+                    align-items: center;
+                    .volume-range {
+                        min-width: 100px;
+                    }
+                }
+            }
+            .top {
+                gap: 20px;
+            }
+            .play {
+                width: 64px;
+                height: 64px;
+            }
+        }
+    }
+}
